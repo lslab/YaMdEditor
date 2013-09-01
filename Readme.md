@@ -1,5 +1,7 @@
 ﻿# YaMdEditor
 
+## 简介
+
 "YaMdEditor" 是Yet Another Markdown Editor的简写。
 
 YaMdeditor是免费开源的markdown文本编辑器,适用于Windows XP/Vista/7/8。
@@ -24,9 +26,9 @@ GFM
 Download & Support site:
 https://github.com/lslab/YaMdEditor
 
-感谢：
+##感谢
  
-MarkDown#Editor
+### MarkDown#Editor
 Copyright (C) 2012-2013 M.Hibara, All rights reserved.
 [https://github.com/hibara/MarkDownSharpEditor](https://github.com/hibara/MarkDownSharpEditor)
 
