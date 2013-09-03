@@ -405,6 +405,7 @@ namespace YaMdEditor
                     using (StreamWriter sw = new StreamWriter(saveFileDialog1.FileName, false, _EditingFileEncoding))
                     {
                         sw.Write(txtMarkdown.Text);
+                        _MarkDownTextFilePath = saveFileDialog1.FileName;
 
                     }
                 }
@@ -424,6 +425,10 @@ namespace YaMdEditor
                 }
 
             }
+
+            _fNoTitle = false;
+            txtMarkdown.Modified = false;
+            FormTextChange();
             return true;
         }
 
