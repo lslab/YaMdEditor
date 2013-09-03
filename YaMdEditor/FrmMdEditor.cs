@@ -63,7 +63,7 @@ namespace YaMdEditor
             }
             else if (obj.FormState == 2)
             {
-                
+
                 this.WindowState = FormWindowState.Maximized;
             }
 
@@ -329,7 +329,7 @@ namespace YaMdEditor
             txtMarkdown.BeginUpdate();
             txtMarkdown.SelectionStart = txtMarkdown.Text.Length;
             txtMarkdown.ScrollToCaret();
-            
+
             //Get height of richTextBox1 ( for webBrowser sync )
             _richEditBoxInternalHeight = txtMarkdown.VerticalPosition;
             //Restore cursor position
@@ -360,26 +360,14 @@ namespace YaMdEditor
                 return;
             }
 
+            if (txtMarkdown.Text == "")
+                return;
+
             string ResultText = "";
             bgWorker_Preview.WorkerReportsProgress = true;
-            //Insert marker in editing
-            if (txtMarkdown.SelectionStart > 0)
-            {
-                int NextLineNum = txtMarkdown.GetLineFromCharIndex(txtMarkdown.SelectionStart) + 1;
-                int ParagraphStart = txtMarkdown.GetFirstCharIndexOfCurrentLine();
-                if (ParagraphStart == 0)
-                {
-                    ParagraphStart = 1;
-                }
-                ResultText =
-                    txtMarkdown.Text.Substring(0, ParagraphStart - 1) + "<!-- edit -->" +
-                    txtMarkdown.Text.Substring(ParagraphStart);
-            }
-            else
-            {
-                ResultText = txtMarkdown.Text;
-            }
-
+            
+            ResultText = txtMarkdown.Text;
+            
             bgWorker_Preview.RunWorkerAsync(ResultText);
 
         }
@@ -940,7 +928,7 @@ namespace YaMdEditor
             AppSettings.Instance.FontFormat = fc.ConvertToString(txtMarkdown.Font);
             AppSettings.Instance.richEditForeColor = txtMarkdown.ForeColor.ToArgb();
 
-            
+
             //Save view options etc
             AppSettings.Instance.fViewToolBar = this.menuViewToolBar.Checked;
             AppSettings.Instance.fViewStatusBar = this.menuViewStatusBar.Checked;
@@ -1353,10 +1341,10 @@ namespace YaMdEditor
             }
 
             string ResultText = "";
-            
+
             string HeaderString = "";
             string FooterString = "";
-            
+
             string EncodingName;
             Encoding encRead = Encoding.UTF8;
             Encoding encHtml = Encoding.UTF8;
@@ -1465,9 +1453,9 @@ namespace YaMdEditor
 
                 if (File.Exists(FilePath) == true)
                 {
-                    ResultText= File.ReadAllText(FilePath, encRead);
+                    ResultText = File.ReadAllText(FilePath, encRead);
                 }
-                
+
                 //Convert it if encoding is not utf-8
                 if (encRead != Encoding.UTF8)
                 {
@@ -1482,12 +1470,12 @@ namespace YaMdEditor
             ResultText = ConvertStringToEncoding(ResultText, Encoding.UTF8.CodePage, CodePageNum);
 
             if (fToClipboard == true)
-            {	
+            {
                 //Set data to clipbord
                 Clipboard.SetText(ResultText);
             }
             else
-            {	
+            {
                 //Write file
                 using (StreamWriter sw = new StreamWriter(SaveToFilePath, false, encHtml))
                 {
@@ -1534,7 +1522,7 @@ namespace YaMdEditor
             {
                 saveFileDialog1.InitialDirectory = DirPath;
             }
-            
+
             //Show Save dialog
             if (AppSettings.Instance.fShowHtmlSaveDialog == true)
             {
