@@ -32,6 +32,9 @@ namespace YaMdEditor
 
         private int _richEditBoxInternalHeight;
 
+        private string _markdownParser = "SundownNet";
+        private string _markdownExtension = "GFM";
+
         public FormMdEditor()
         {
             InitializeComponent();
@@ -40,9 +43,14 @@ namespace YaMdEditor
 
         private void frmMdEditor_Load(object sender, EventArgs e)
         {
+            //ignore script errors in Webbrowser
+            webPreview.ScriptErrorsSuppressed = true;
+            
             var obj = AppSettings.Instance;
 
 
+            this._markdownParser = obj.MarkdownParser;
+            this._markdownExtension = obj.MardownExtension;
             this.Location = obj.FormPos;
             this.Size = obj.FormSize;
             this.txtMarkdown.Width = obj.richEditWidth;
@@ -716,13 +724,76 @@ namespace YaMdEditor
             // MarkdownDeep
             // Create an instance of Markdown
             //-----------------------------------
-            var mkdwn = new MarkdownDeep.Markdown();
-            // Set options
-            mkdwn.ExtraMode = AppSettings.Instance.fMarkdownExtraMode;
-            mkdwn.SafeMode = false;
-            //-----------------------------------
 
-            ResultText = mkdwn.Transform(ResultText);
+            if (_markdownParser=="SundownNet")
+            {
+                if (_markdownExtension == "GFM")
+                {
+                    var mode = new Sundown.HtmlRenderMode();
+                    mode.TOC = true;
+                    mode.HardWrap = true;
+
+                    var render = new Sundown.HtmlRenderer(mode);
+                    var toc = new Sundown.TableOfContentRenderer();
+
+                    var extension = new Sundown.MarkdownExtensions();
+                    extension.Autolink = true;
+                    extension.FencedCode = true;
+                    extension.Tables = true;
+                    extension.Strikethrough = true;
+                    extension.NoIntraEmphasis = true;
+                    extension.SuperScript = true;
+
+                    var mdtoc = new Sundown.Markdown(toc);
+                    var md = new Sundown.Markdown(render, extension);
+
+                    ResultText = mdtoc.Transform(ResultText) + md.Transform(ResultText);
+                }
+                else
+                {
+                    var render = new Sundown.HtmlRenderer();
+                    var md = new Sundown.Markdown(render);
+
+                    ResultText = md.Transform(ResultText);
+                }
+            }
+            else if (_markdownParser == "MarkdownSharp")
+            {
+                if (_markdownExtension == "StackOverflow")
+                {
+                    var md = new MarkdownSharp.Markdown();
+                    md.AutoNewLines = true;
+                    md.AutoHyperlink = true;
+                    md.LinkEmails = true;
+                    md.StrictBoldItalic = true;
+                    ResultText = md.Transform(ResultText);
+                }
+                else
+                {
+                    var md = new MarkdownSharp.Markdown();
+                    ResultText = md.Transform(ResultText);
+                }
+            }
+            else if(_markdownParser == "MarkdownDeep")
+            {
+                if (_markdownExtension == "ExtraMode")
+                {
+                    var md = new MarkdownDeep.Markdown();
+                    
+                    md.ExtraMode = true;
+                    md.SafeMode = false;
+                    
+                    ResultText = md.Transform(ResultText);
+                }
+                else
+                {
+                    var md = new MarkdownDeep.Markdown();
+                    var text=md.SectionHeader;
+                    md.ExtraMode =false;
+                    md.SafeMode = true;
+                    ResultText = md.Transform(ResultText);
+                }
+            }
             //Creat HTML data
             ResultText = _htmlHeader + ResultText + _htmlFooter;
 
@@ -773,6 +844,12 @@ namespace YaMdEditor
                     this.webPreview.DocumentText = (string)e.Result;
 
                 }
+
+                while (webPreview.ReadyState != WebBrowserReadyState.Complete)
+                {
+                    Application.DoEvents();
+                }
+                WebBrowserMoveCursor();
             }
         }
 
@@ -941,6 +1018,9 @@ namespace YaMdEditor
             AppSettings.Instance.fViewPreview = this.menuViewPreview.Checked;
             AppSettings.Instance.fViewVertical = this.menuViewVertical.Checked;
             AppSettings.Instance.fAutoBrowserPreview = this.menuViewAutoPreview.Checked;
+
+            AppSettings.Instance.MarkdownParser = this._markdownParser;
+            AppSettings.Instance.MardownExtension = this._markdownExtension;
 
             //Save search options
             //AppSettings.Instance.fSearchOptionIgnoreCase = chkOptionCase.Checked ? false : true;
@@ -1148,9 +1228,10 @@ namespace YaMdEditor
 
         }
 
+        //paste plain text without colours/fonts
         private void menuPaste_Click(object sender, EventArgs e)
         {
-            txtMarkdown.Paste();
+            txtMarkdown.Paste(DataFormats.GetFormat(DataFormats.Text));
         }
 
         private void menuRedo_Click(object sender, EventArgs e)
@@ -1416,9 +1497,9 @@ namespace YaMdEditor
 <body>
 ",
                     DocType,         //DOCTYPE
-                    EncodingName,    //エンコーディング ( Encoding )
-                    FileName,        //タイトル（＝ファイル名） ( Title = file name )
-                    CssContents);	   //CSSの内容 ( Contents of CSS file )
+                    EncodingName,    //Encoding
+                    FileName,        //Title = file name
+                    CssContents);	 //Contents of CSS file
                 //( Footer )
                 FooterString = "</body>\n</html>";
             }
@@ -1439,7 +1520,7 @@ namespace YaMdEditor
             //-----------------------------------
             var mkdwn = new MarkdownDeep.Markdown();
             // Set options
-            mkdwn.ExtraMode = AppSettings.Instance.fMarkdownExtraMode;
+            mkdwn.ExtraMode = true;
             mkdwn.SafeMode = false;
             //-----------------------------------
 
@@ -1596,6 +1677,20 @@ namespace YaMdEditor
                 MessageBox.Show(Resources.MsgOutputToClipboard,
                     Resources.DialogTitleNotice, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+
+        //paste plain text without colours/fonts
+        //overiding richeditbox ctrl + v shortcut
+        //Set the RichtTextBox.ShortcutsEnabled property to true and then handle the shortcuts yourself, using the KeyUp event.
+        //use richeditbox paste method, don't use this method.
+        private void txtMarkdown_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.Control && e.KeyCode == Keys.V)
+            {
+                ((RichTextBox)sender).Paste(DataFormats.GetFormat("Text"));
+                e.Handled = true;
+            }            
         }
     }
 }

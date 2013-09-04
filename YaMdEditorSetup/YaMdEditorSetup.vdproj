@@ -21,7 +21,19 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_18293157F7844CDEBDF032EE8551BFAB"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_1A0D2C2A696D4F259A96AB582646684C"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_36F7D9DCD8A0489F82EF5E396140C2DF"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -145,6 +157,27 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.0,Profile=Client"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4 Client Profile (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.0,Profile=Client"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Windows.Installer.3.1"
+                    {
+                    "Name" = "8:Windows Installer 3.1"
+                    "ProductCode" = "8:Microsoft.Windows.Installer.3.1"
+                    }
+                }
+            }
         }
         "Release"
         {
@@ -161,6 +194,27 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.0,Profile=Client"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4 Client Profile (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.0,Profile=Client"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Windows.Installer.3.1"
+                    {
+                    "Name" = "8:Windows Installer 3.1"
+                    "ProductCode" = "8:Microsoft.Windows.Installer.3.1"
+                    }
+                }
+            }
         }
     }
     "Deployable"
@@ -210,10 +264,50 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_18293157F7844CDEBDF032EE8551BFAB"
+            {
+            "SourcePath" = "8:..\\lib\\sundown.dll"
+            "TargetName" = "8:sundown.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_6F961DD6B3C34B0D8F7E51213D3FAE1A"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1A0D2C2A696D4F259A96AB582646684C"
             {
             "SourcePath" = "8:..\\css\\screen.css"
             "TargetName" = "8:screen.css"
+            "Tag" = "8:"
+            "Folder" = "8:_957742DF0D25495BB635FEBD8CB00E54"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_36F7D9DCD8A0489F82EF5E396140C2DF"
+            {
+            "SourcePath" = "8:..\\css\\github0.css"
+            "TargetName" = "8:github0.css"
             "Tag" = "8:"
             "Folder" = "8:_957742DF0D25495BB635FEBD8CB00E54"
             "Condition" = "8:"
@@ -629,7 +723,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:YaMdEditor"
         "ProductCode" = "8:{164ECBEE-D77E-40F0-9925-F46C55142CF6}"
-        "PackageCode" = "8:{4A882E20-8F7E-4D69-8E2C-8C44C7ED48EB}"
+        "PackageCode" = "8:{9B7849AF-88C6-46D1-86B9-102527AF511C}"
         "UpgradeCode" = "8:{937D91C8-C7D4-4FDE-92BC-386DE1B9D4BE}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -755,12 +849,12 @@
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
-            "IconIndex" = "3:0"
+            "IconIndex" = "3:32512"
             "Transitive" = "11:FALSE"
             "Target" = "8:_2EFE575E6F4943919AD25A31A61EC3A6"
             "Folder" = "8:_A93E894C347E44069E5C6B8FEDDF3F33"
             "WorkingFolder" = "8:_6F961DD6B3C34B0D8F7E51213D3FAE1A"
-            "Icon" = "8:"
+            "Icon" = "8:_2EFE575E6F4943919AD25A31A61EC3A6"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_6951B551F0924255AFC6E84A325C67D7"
@@ -769,12 +863,12 @@
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
-            "IconIndex" = "3:0"
+            "IconIndex" = "3:32512"
             "Transitive" = "11:FALSE"
             "Target" = "8:_2EFE575E6F4943919AD25A31A61EC3A6"
             "Folder" = "8:_C4DF70FF7A4F4C8CA0A51B2BD7CD4F98"
             "WorkingFolder" = "8:_6F961DD6B3C34B0D8F7E51213D3FAE1A"
-            "Icon" = "8:"
+            "Icon" = "8:_2EFE575E6F4943919AD25A31A61EC3A6"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_F7ABA98EB2CD473EA43E8575B5ABD0C3"

@@ -138,6 +138,19 @@ class RichTextBoxEx : RichTextBox
 			base.WndProc(ref m);
 	}
 
+    //Converting tabs into spaces 
+    protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+    {
+        if (keyData == Keys.Tab)
+        {
+            SelectionLength = 0;
+            SelectedText = new string(' ', 4);
+            return true;
+        }
+
+        return base.ProcessCmdKey(ref msg, keyData);
+    }
+
 	public override string Text
 	{
 		get

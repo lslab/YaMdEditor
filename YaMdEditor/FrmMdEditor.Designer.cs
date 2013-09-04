@@ -139,6 +139,7 @@
             // 
             // txtMarkdown
             // 
+            this.txtMarkdown.AcceptsTab = true;
             resources.ApplyResources(this.txtMarkdown, "txtMarkdown");
             this.txtMarkdown.HorizontalPosition = 0;
             this.txtMarkdown.Name = "txtMarkdown";
@@ -146,6 +147,7 @@
             this.txtMarkdown.VerticalPosition = 0;
             this.txtMarkdown.VScroll += new System.EventHandler(this.txtMarkdown_VScroll);
             this.txtMarkdown.TextChanged += new System.EventHandler(this.txtMarkdown_TextChanged);
+            
             // 
             // tabControl1
             // 

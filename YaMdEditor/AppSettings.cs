@@ -51,8 +51,6 @@ namespace YaMdEditor
         private bool _fMarkdownExtraMode;
 
 
-
-        [XmlIgnore]
         private List<string> _ArrayCssFileList = new List<string>();
         private bool _fHtmlOutputHeader;
         private string _HtmlDocType;
@@ -63,7 +61,8 @@ namespace YaMdEditor
         private bool _fViewAllEncoding;
         private string AppDataPath;
 
-
+        private string _markdownParser;
+        private string _markdownExtension;
 
         #endregion
 
@@ -216,7 +215,7 @@ namespace YaMdEditor
             set { _fMarkdownExtraMode = value; }
         }
         
-        //[XmlIgnore]
+        [XmlIgnore]
         public List<string> ArrayCssFileList
         {
             get { return _ArrayCssFileList; }
@@ -259,7 +258,18 @@ namespace YaMdEditor
             get { return _fViewAllEncoding; }
             set { _fViewAllEncoding = value; }
         }
- 
+
+        public string MarkdownParser
+        {
+            get { return _markdownParser; }
+            set { _markdownParser = value; }
+        }
+
+        public string MardownExtension
+        {
+            get { return _markdownExtension; }
+            set { _markdownExtension = value; }
+        }
 
         #endregion
         //-----------------------------------
@@ -339,6 +349,8 @@ namespace YaMdEditor
             _HtmlDocTypeSelectedIndex = 0;
             _fViewAllEncoding = false;
 
+            _markdownParser = "SundownNet";
+            _markdownExtension = "GFM";
 
         }
 
@@ -475,6 +487,7 @@ namespace YaMdEditor
         private void InitCssFileList()
         {
             // Set default data when the list of CSS files do not exist.
+            /*
             foreach (string data in ArrayCssFileList)
             {
                 // Inspect first element because blank element is created when XML file is read. 
@@ -483,6 +496,7 @@ namespace YaMdEditor
                     return;
                 }
             }
+            */
 
             //Initial directory of CSS files
 

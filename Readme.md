@@ -18,6 +18,8 @@ YaMdeditor是免费开源的markdown文本编辑器,适用于Windows XP/Vista/7/
 后续版本计划支持：  
 GFM  
 支持不同markdown 解析引擎。
+toc
+
 
 
 程序代码采用C#开发，基于dotnetframework4.0
