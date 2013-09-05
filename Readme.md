@@ -40,20 +40,17 @@ Copyright (c) 2004 John Gruber
 [http://daringfireball.net/projects/markdown/](http://daringfireball.net/projects/markdown/)
 
 ### MarkdownDeep
-[http://www.toptensoftware.com/markdowndeep/](http://www.toptensoftware.com/markdowndeep/)
 Copyright 2010-2011 Topten Software
+[http://www.toptensoftware.com/markdowndeep/](http://www.toptensoftware.com/markdowndeep/)
 
 ### MarkdownSharp
 [https://code.google.com/p/markdownsharp/](https://code.google.com/p/markdownsharp/)
-Copyright 2010-2011 Topten Software
 
 ### SunDownNet
 [https://github.com/txdv/sundown.net/](https://github.com/txdv/sundown.net/)
-Copyright 2010-2011 Topten Software
 
 ### SunDown
 [https://github.com/vmg/sundown/](https://github.com/vmg/sundown/)
-Copyright 2010-2011 Topten Software
 
 
 ### Markdown css themes
