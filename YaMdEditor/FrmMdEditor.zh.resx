@@ -801,4 +801,25 @@
   <data name="toolStripButtonOutputHtmlToClipBoard.Text" xml:space="preserve">
     <value>导出HTML源代码到剪贴板</value>
   </data>
+  <data name="toolStripcbMarkdownParser.Items" xml:space="preserve">
+    <value>SundownNet - GitHub风格Markdown带目录</value>
+  </data>
+  <data name="toolStripcbMarkdownParser.Items1" xml:space="preserve">
+    <value>SundownNet - GitHub风格Markdown</value>
+  </data>
+  <data name="toolStripcbMarkdownParser.Items2" xml:space="preserve">
+    <value>SundownNet - 标准</value>
+  </data>
+  <data name="toolStripcbMarkdownParser.Items3" xml:space="preserve">
+    <value>MarkdownSharp - StackOverFlow风格</value>
+  </data>
+  <data name="toolStripcbMarkdownParser.Items4" xml:space="preserve">
+    <value>MarkdownSharp - 标准</value>
+  </data>
+  <data name="toolStripcbMarkdownParser.Items5" xml:space="preserve">
+    <value>MarkdownDeep - MarkDown Extra</value>
+  </data>
+  <data name="toolStripcbMarkdownParser.Items6" xml:space="preserve">
+    <value>MarkdownDeep - 标准</value>
+  </data>
 </root>

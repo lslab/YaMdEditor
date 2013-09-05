@@ -233,9 +233,6 @@ Do you wish to continue searching from the beginning of this file?</value>
   <data name="MsgTheseCSSFilesFound" xml:space="preserve">
     <value>These CSS files is found. Do you add these files to list?</value>
   </data>
-  <data name="MsgThisWord" xml:space="preserve">
-    <value />
-  </data>
   <data name="NewVersionFound" xml:space="preserve">
     <value>New version was found! Do you open the download site?</value>
   </data>

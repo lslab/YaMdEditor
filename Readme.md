@@ -12,13 +12,12 @@ YaMdeditor是免费开源的markdown文本编辑器,适用于Windows XP/Vista/7/
 *  可以随时切换CSS文件，并在预览界面自动显示。
 *  可以输出HTML到文件或剪贴板。
 *  支持Markdown Extra mode
+*  支持不同markdown 解析引擎。
+*  支持GFM，TOC
 
 ...等等
 
 后续版本计划支持：  
-GFM  
-支持不同markdown 解析引擎。
-toc
 
 
 
@@ -29,10 +28,12 @@ Download & Support site:
 https://github.com/lslab/YaMdEditor
 
 ##感谢
+
+
  
 ### MarkDown#Editor
 Copyright (C) 2012-2013 M.Hibara, All rights reserved.
-[https://github.com/hibara/MarkDownSharpEditor](https://github.com/hibara/MarkDownSharpEditor)
+[https://github.com/hibara/MarkDownSharpEditor/](https://github.com/hibara/MarkDownSharpEditor/)
 
 ### Markdown  -  A text-to-HTML conversion tool for web writers
 Copyright (c) 2004 John Gruber
@@ -41,6 +42,19 @@ Copyright (c) 2004 John Gruber
 ### MarkdownDeep
 [http://www.toptensoftware.com/markdowndeep/](http://www.toptensoftware.com/markdowndeep/)
 Copyright 2010-2011 Topten Software
+
+### MarkdownSharp
+[https://code.google.com/p/markdownsharp/](https://code.google.com/p/markdownsharp/)
+Copyright 2010-2011 Topten Software
+
+### SunDownNet
+[https://github.com/txdv/sundown.net/](https://github.com/txdv/sundown.net/)
+Copyright 2010-2011 Topten Software
+
+### SunDown
+[https://github.com/vmg/sundown/](https://github.com/vmg/sundown/)
+Copyright 2010-2011 Topten Software
+
 
 ### Markdown css themes
 [https://github.com/jasonm23/markdown-css-themes](https://github.com/jasonm23/markdown-css-themes)

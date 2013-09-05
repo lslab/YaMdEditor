@@ -32,8 +32,8 @@ namespace YaMdEditor
 
         private int _richEditBoxInternalHeight;
 
-        private string _markdownParser = "SundownNet";
-        private string _markdownExtension = "GFM";
+        private int _markdownParserIndex = 0;
+
 
         public FormMdEditor()
         {
@@ -45,12 +45,12 @@ namespace YaMdEditor
         {
             //ignore script errors in Webbrowser
             webPreview.ScriptErrorsSuppressed = true;
-            
+
             var obj = AppSettings.Instance;
 
 
-            this._markdownParser = obj.MarkdownParser;
-            this._markdownExtension = obj.MardownExtension;
+            this._markdownParserIndex = obj.MarkdownParserIndex;
+            this.toolStripcbMarkdownParser.SelectedIndex = _markdownParserIndex;
             this.Location = obj.FormPos;
             this.Size = obj.FormSize;
             this.txtMarkdown.Width = obj.richEditWidth;
@@ -373,9 +373,9 @@ namespace YaMdEditor
 
             string ResultText = "";
             bgWorker_Preview.WorkerReportsProgress = true;
-            
+
             ResultText = txtMarkdown.Text;
-            
+
             bgWorker_Preview.RunWorkerAsync(ResultText);
 
         }
@@ -725,75 +725,88 @@ namespace YaMdEditor
             // Create an instance of Markdown
             //-----------------------------------
 
-            if (_markdownParser=="SundownNet")
+            if (_markdownParserIndex == 0)  //SundownNet - Github Flovored Markdown With TOC
             {
-                if (_markdownExtension == "GFM")
-                {
-                    var mode = new Sundown.HtmlRenderMode();
-                    mode.TOC = true;
-                    mode.HardWrap = true;
+                var mode = new Sundown.HtmlRenderMode();
+                mode.TOC = true;
+                mode.HardWrap = true;
 
-                    var render = new Sundown.HtmlRenderer(mode);
-                    var toc = new Sundown.TableOfContentRenderer();
+                var render = new Sundown.HtmlRenderer(mode);
+                var toc = new Sundown.TableOfContentRenderer();
 
-                    var extension = new Sundown.MarkdownExtensions();
-                    extension.Autolink = true;
-                    extension.FencedCode = true;
-                    extension.Tables = true;
-                    extension.Strikethrough = true;
-                    extension.NoIntraEmphasis = true;
-                    extension.SuperScript = true;
+                var extension = new Sundown.MarkdownExtensions();
+                extension.Autolink = true;
+                extension.FencedCode = true;
+                extension.Tables = true;
+                extension.Strikethrough = true;
+                extension.NoIntraEmphasis = true;
+                extension.SuperScript = true;
 
-                    var mdtoc = new Sundown.Markdown(toc);
-                    var md = new Sundown.Markdown(render, extension);
+                var mdtoc = new Sundown.Markdown(toc);
+                var md = new Sundown.Markdown(render, extension);
 
-                    ResultText = mdtoc.Transform(ResultText) + md.Transform(ResultText);
-                }
-                else
-                {
-                    var render = new Sundown.HtmlRenderer();
-                    var md = new Sundown.Markdown(render);
-
-                    ResultText = md.Transform(ResultText);
-                }
+                ResultText = mdtoc.Transform(ResultText) + md.Transform(ResultText);
             }
-            else if (_markdownParser == "MarkdownSharp")
+            else if (_markdownParserIndex == 1)  //SundownNet - Github Flovored Markdown
             {
-                if (_markdownExtension == "StackOverflow")
-                {
-                    var md = new MarkdownSharp.Markdown();
-                    md.AutoNewLines = true;
-                    md.AutoHyperlink = true;
-                    md.LinkEmails = true;
-                    md.StrictBoldItalic = true;
-                    ResultText = md.Transform(ResultText);
-                }
-                else
-                {
-                    var md = new MarkdownSharp.Markdown();
-                    ResultText = md.Transform(ResultText);
-                }
+                var mode = new Sundown.HtmlRenderMode();
+                mode.HardWrap = true;
+
+                var render = new Sundown.HtmlRenderer(mode);
+                
+                var extension = new Sundown.MarkdownExtensions();
+                extension.Autolink = true;
+                extension.FencedCode = true;
+                extension.Tables = true;
+                extension.Strikethrough = true;
+                extension.NoIntraEmphasis = true;
+                extension.SuperScript = true;
+
+                var md = new Sundown.Markdown(render, extension);
+
+                ResultText = md.Transform(ResultText);
             }
-            else if(_markdownParser == "MarkdownDeep")
+            else if (_markdownParserIndex == 2)  //SundownNet - Standard
             {
-                if (_markdownExtension == "ExtraMode")
-                {
-                    var md = new MarkdownDeep.Markdown();
-                    
-                    md.ExtraMode = true;
-                    md.SafeMode = false;
-                    
-                    ResultText = md.Transform(ResultText);
-                }
-                else
-                {
-                    var md = new MarkdownDeep.Markdown();
-                    var text=md.SectionHeader;
-                    md.ExtraMode =false;
-                    md.SafeMode = true;
-                    ResultText = md.Transform(ResultText);
-                }
+                var render = new Sundown.HtmlRenderer();
+                var md = new Sundown.Markdown(render);
+
+                ResultText = md.Transform(ResultText);
             }
+            else if (_markdownParserIndex == 3)  //MarkdownSharp - StackOverFlow Style 
+            {
+                var md = new MarkdownSharp.Markdown();
+                md.AutoNewLines = true;
+                md.AutoHyperlink = true;
+                md.LinkEmails = true;
+                md.StrictBoldItalic = true;
+                ResultText = md.Transform(ResultText);
+
+            }
+            else if (_markdownParserIndex == 4)   //MarkdownSharp - Standard
+            {
+                var md = new MarkdownSharp.Markdown();
+                ResultText = md.Transform(ResultText);
+            }
+            else if (_markdownParserIndex == 5) //MarkdownDeep - Markdown Extra
+            {
+                var md = new MarkdownDeep.Markdown();
+
+                md.ExtraMode = true;
+                md.SafeMode = false;
+
+                ResultText = md.Transform(ResultText);
+
+            }
+            else
+            {
+                var md = new MarkdownDeep.Markdown();
+                var text = md.SectionHeader;
+                md.ExtraMode = false;
+                md.SafeMode = true;
+                ResultText = md.Transform(ResultText);
+            }
+
             //Creat HTML data
             ResultText = _htmlHeader + ResultText + _htmlFooter;
 
@@ -1019,8 +1032,7 @@ namespace YaMdEditor
             AppSettings.Instance.fViewVertical = this.menuViewVertical.Checked;
             AppSettings.Instance.fAutoBrowserPreview = this.menuViewAutoPreview.Checked;
 
-            AppSettings.Instance.MarkdownParser = this._markdownParser;
-            AppSettings.Instance.MardownExtension = this._markdownExtension;
+            AppSettings.Instance.MarkdownParserIndex = this._markdownParserIndex;
 
             //Save search options
             //AppSettings.Instance.fSearchOptionIgnoreCase = chkOptionCase.Checked ? false : true;
@@ -1690,7 +1702,14 @@ namespace YaMdEditor
             {
                 ((RichTextBox)sender).Paste(DataFormats.GetFormat("Text"));
                 e.Handled = true;
-            }            
+            }
+        }
+
+        private void toolStripcbMarkdownParser_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this._markdownParserIndex = toolStripcbMarkdownParser.SelectedIndex;
+            this.PreviewToBrowser();
+            this.txtMarkdown.Focus();
         }
     }
 }

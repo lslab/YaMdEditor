@@ -61,8 +61,8 @@ namespace YaMdEditor
         private bool _fViewAllEncoding;
         private string AppDataPath;
 
-        private string _markdownParser;
-        private string _markdownExtension;
+        private int _markdownParserIndex;
+        
 
         #endregion
 
@@ -259,16 +259,10 @@ namespace YaMdEditor
             set { _fViewAllEncoding = value; }
         }
 
-        public string MarkdownParser
+        public int MarkdownParserIndex
         {
-            get { return _markdownParser; }
-            set { _markdownParser = value; }
-        }
-
-        public string MardownExtension
-        {
-            get { return _markdownExtension; }
-            set { _markdownExtension = value; }
+            get { return _markdownParserIndex; }
+            set { _markdownParserIndex = value; }
         }
 
         #endregion
@@ -349,8 +343,8 @@ namespace YaMdEditor
             _HtmlDocTypeSelectedIndex = 0;
             _fViewAllEncoding = false;
 
-            _markdownParser = "SundownNet";
-            _markdownExtension = "GFM";
+            _markdownParserIndex = 0;
+            
 
         }
 

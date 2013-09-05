@@ -394,15 +394,6 @@ namespace YaMdEditor.Properties {
         }
         
         /// <summary>
-        ///   查找类似  的本地化字符串。
-        /// </summary>
-        internal static string MsgThisWord {
-            get {
-                return ResourceManager.GetString("MsgThisWord", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   查找类似 New version was found! Do you open the download site? 的本地化字符串。
         /// </summary>
         internal static string NewVersionFound {

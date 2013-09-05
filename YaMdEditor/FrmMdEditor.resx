@@ -879,14 +879,14 @@
   <data name="toolStripButtonNewFile.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGlSURBVDhPjZFNSwJRFIYvQato1TboB7RqUZuofeWmdcv6
-        E0LQD8hNRUGfRB+QBUIfFAl9UUEWEWGFZSViKuVoapo6M87buTN3RiMafOFwLufc571zzjBTkjRQVJT+
-        AGYZ4GdQlL5QNOqQRdte5UDDluwkEJPADuUH46zXcl3r4tr/UgMN1xawSLHJjDPV0o+d8Bzewb1/g5Vt
-        H5a3faMCq0h20eVJijEOca0ZXzJDsWbWgLmNY3T0Dv01CT0wZXehScM4Xab58VoPHFEutgGRZoHTGyv7
-        8J7f6SZLWxcugdMIquPKGoG/SK9bO8GIDnNNLO3psBkCJ4Nc94kFzFN+rtPPRm2as7oUtaybmEYCN6RJ
-        rcPlYOMUPAS9tQBJJ/2BWYECmqYhX5DxnszrBu09g78NTC14TgXyWyVZRSpTQDiesTeYcR8KpCK1rCGb
-        LyGWyOEpnLI3mFr1CqyiQlFB4vMboWga/mDC3oA3q8UXl/4qIvKeRSCUxNV9vHaD6sU9Rz5x+/iBs5u3
-        2g2qF3f/IsHnj+HgMlybAc92YWvAm7UEY4z9AFKRNv32tr8PAAAAAElFTkSuQmCC
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGlSURBVDhPjZHfK0NhGMfflKvlyq3yB7hywY24x25cu+Sf
+        UMofQAlNMaQhG7Xyo0QZQhlJ2mizsdaMZpsNm805Z+frec95z34kp33r6Xl7nvfzfc/zHGYolRosyvJA
+        AHYG+BhkuT8Sj1sl0TZXKWDZlkYIhA3YpXyvn7VarntDXPtfSsByXQaWKbaYfqZaNtgFt8cP1/4NVne8
+        WNnxjgusImmCLtsopjjE5dS/ZJ7CadSAhc1jdPYN/zWJ3DN5fbJZxTRdpvnx1AgcUS62A7EWgdMbq/s4
+        OPdrJo7tiwmB0wiK9ao8An+RXi/vBGMazDXj2NNgIwROBrmekzKwSDncoJ312hxnNclKSTMxjASuS021
+        jZZCTbNwE/TcCqRH6A/YBQqoqop8QUIindcMOnqHag0MLblPBVKrH0nB+0cB0dcPc4N5l0cgFSklFZ/5
+        H7wkc3iIvpsbzK4dCKyiQlFGMvONSDwLXyhpbsCb1eKLy34VEUt8IhBJ4+rutX6D6sWFYxncBt9wdvNc
+        v0H14u4eU/D6XnB4Ga3PgGezMDXgzXqCMcZ+Afg3Nt++oJEhAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="toolStripButtonNewFile.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
@@ -957,13 +957,13 @@
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHnSURBVDhPY6ApmLTlW8zEjV93zNz98dGyA1+OrNj/Zcqy
         I1+loNL4Qe+GrzvqN1z5073u6/PGFR8f1y/+cmfuzo+Pl+36+gmrId2rXv1fcvKLAYjdtfbLsv7593+n
-        9Lx64xJ/4rdW6vY/+gnrv9uX3f04c+vXN6v2f7kJ1gQDK4/942xc8vL/vP1fr9Yv/9pQv+nKn7j6ef9c
-        C47/t8vY9MskdtVx+/ytD7Xi6/+Edbz8ufjA5/tQrQhQPPP5/6xZn/8XzvnyP7Lr3Qsr+y1/zaIX/zCJ
-        XpkPkvet36FiGLzghWv59ff1S7/sAWtCBkl9z/57N735H937+X/ZnDf/NbwmrTaKWuEIlWZgCA1llo8/
-        9Nu17M7r+pVfDkFFESCo+el/s+L7/z2bXoFdktjz6H/twreWUGkGY+M0Vjv7/X/d6p59a1rxeQtUGAGc
-        Kh7/dyi69t8q8/h/k/ht/w2j1v7X8Jn6HyrNYJK4Rsk2s/6ffcv+v/nTHpVChXEDUMBCmWCg7j3ZXavs
-        yp+0+mX/6lf9Z4MKEw8sUvZdDKlf/i+s7mwuVIg4kNj3Qck+73yMP1CzW+WVbwwM/xmhUsQBj8onzj71
-        T3/ZZ+3/aRy5wgsqTDyI6Pkc6VxytdEgcaUoVGhQAQYGAFka8rlayFLmAAAAAElFTkSuQmCC
+        9Lx64xJ/4rdW6vY/+gnrv9uX3f04c+vXN6v2f7kJ1gQDK4/942xc8vL/vP1fr9Yv/9pQv+nKn7j6/n+u
+        Bcf/22Vs+mUSu+q4ff7Wh1rx9X/COl7+XHzg832oVgQonvn8f9asz/8L53z5H9n17oWV/Za/ZtGLf5hE
+        r8wHyfvW71AxDF7wwrX8+vv6pV/2gDUhg6S+Z/+9m978j+79/L9szpv/Gl6TVhtFrXCESjMwhIYyy8cf
+        +u1adud1/covh6CiCBDU/PS/WfH9/55Nr8AuSex59L924VtLqDSDsXEaq539/r9udc++Na34vAUqjABO
+        FY//OxRd+2+Vefy/Sfy2/4ZRa/9r+Ez9D5VmMElco2SbWf/PvmX/3/xpj0qhwrgBKGChTDBQ957srlV2
+        5U9a/fR/9av+s0GFiQcWKfsuhtTP+BdWdzYXKkQcSOz7oGSfdz7GH6jZrfLKNwaG/4xQKeKAR+UTZ5/6
+        p7/ss/b/NI5c4QUVJh5E9HyOdC652miQuFIUKjSoAAMDAPCh8n2P0U1jAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="toolStripButtonUndo.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
@@ -1167,6 +1167,33 @@
   </data>
   <data name="toolStripSeparator5.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>
+  </data>
+  <data name="toolStripcbMarkdownParser.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Standard</value>
+  </data>
+  <data name="toolStripcbMarkdownParser.Items" xml:space="preserve">
+    <value>SundownNet - GitHub Flavored Markdown With TOC</value>
+  </data>
+  <data name="toolStripcbMarkdownParser.Items1" xml:space="preserve">
+    <value>SundownNet - GitHub Flavored Markdown</value>
+  </data>
+  <data name="toolStripcbMarkdownParser.Items2" xml:space="preserve">
+    <value>SundownNet - Standard</value>
+  </data>
+  <data name="toolStripcbMarkdownParser.Items3" xml:space="preserve">
+    <value>MarkdownSharp - StackOverFlow Style</value>
+  </data>
+  <data name="toolStripcbMarkdownParser.Items4" xml:space="preserve">
+    <value>MarkdownSharp - Standard</value>
+  </data>
+  <data name="toolStripcbMarkdownParser.Items5" xml:space="preserve">
+    <value>MarkdownDeep - MarkDown Extra</value>
+  </data>
+  <data name="toolStripcbMarkdownParser.Items6" xml:space="preserve">
+    <value>MarkdownDeep - Standard</value>
+  </data>
+  <data name="toolStripcbMarkdownParser.Size" type="System.Drawing.Size, System.Drawing">
+    <value>350, 25</value>
   </data>
   <data name="toolStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 25</value>
@@ -1680,6 +1707,12 @@
   </data>
   <data name="&gt;&gt;toolStripSeparator5.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripcbMarkdownParser.Name" xml:space="preserve">
+    <value>toolStripcbMarkdownParser</value>
+  </data>
+  <data name="&gt;&gt;toolStripcbMarkdownParser.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStripStatusLabelTextEncoding.Name" xml:space="preserve">
     <value>toolStripStatusLabelTextEncoding</value>

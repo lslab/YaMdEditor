@@ -98,6 +98,7 @@
             this.toolButtonOutput = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonOutputHtmlToClipBoard = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripcbMarkdownParser = new System.Windows.Forms.ToolStripComboBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelTextEncoding = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -143,11 +144,9 @@
             resources.ApplyResources(this.txtMarkdown, "txtMarkdown");
             this.txtMarkdown.HorizontalPosition = 0;
             this.txtMarkdown.Name = "txtMarkdown";
-            this.txtMarkdown.Text = global::YaMdEditor.Properties.Resources.MsgThisWord;
             this.txtMarkdown.VerticalPosition = 0;
             this.txtMarkdown.VScroll += new System.EventHandler(this.txtMarkdown_VScroll);
             this.txtMarkdown.TextChanged += new System.EventHandler(this.txtMarkdown_TextChanged);
-            
             // 
             // tabControl1
             // 
@@ -510,7 +509,8 @@
             this.toolStripSeparator6,
             this.toolButtonOutput,
             this.toolStripButtonOutputHtmlToClipBoard,
-            this.toolStripSeparator5});
+            this.toolStripSeparator5,
+            this.toolStripcbMarkdownParser});
             resources.ApplyResources(this.toolStrip1, "toolStrip1");
             this.toolStrip1.Name = "toolStrip1";
             // 
@@ -620,6 +620,23 @@
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
             resources.ApplyResources(this.toolStripSeparator5, "toolStripSeparator5");
+            // 
+            // toolStripcbMarkdownParser
+            // 
+            this.toolStripcbMarkdownParser.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripcbMarkdownParser.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.toolStripcbMarkdownParser.DropDownWidth = 350;
+            resources.ApplyResources(this.toolStripcbMarkdownParser, "toolStripcbMarkdownParser");
+            this.toolStripcbMarkdownParser.Items.AddRange(new object[] {
+            resources.GetString("toolStripcbMarkdownParser.Items"),
+            resources.GetString("toolStripcbMarkdownParser.Items1"),
+            resources.GetString("toolStripcbMarkdownParser.Items2"),
+            resources.GetString("toolStripcbMarkdownParser.Items3"),
+            resources.GetString("toolStripcbMarkdownParser.Items4"),
+            resources.GetString("toolStripcbMarkdownParser.Items5"),
+            resources.GetString("toolStripcbMarkdownParser.Items6")});
+            this.toolStripcbMarkdownParser.Name = "toolStripcbMarkdownParser";
+            this.toolStripcbMarkdownParser.SelectedIndexChanged += new System.EventHandler(this.toolStripcbMarkdownParser_SelectedIndexChanged);
             // 
             // statusStrip1
             // 
@@ -819,6 +836,7 @@
         private System.Windows.Forms.ToolStripMenuItem menuViewLanguage;
         private System.Windows.Forms.ToolStripMenuItem menuViewChinese;
         private System.Windows.Forms.ToolStripMenuItem menuViewEnglish;
+        private System.Windows.Forms.ToolStripComboBox toolStripcbMarkdownParser;
         
 
     }
