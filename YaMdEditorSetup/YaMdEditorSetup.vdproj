@@ -647,6 +647,52 @@
         }
         "FileType"
         {
+            "{5EB83D71-FA18-4901-BE56-DE22E13CC478}:_A1BA4150F2854B52989FD47B8C8DFEBF"
+            {
+            "Name" = "8:md"
+            "Description" = "8:"
+            "Extensions" = "8:.md"
+            "MIME" = "8:"
+            "Icon" = "8:"
+            "IconIndex" = "3:0"
+                "Command"
+                {
+                "Command" = "8:_2EFE575E6F4943919AD25A31A61EC3A6"
+                }
+                "Verbs"
+                {
+                    "{95C0C507-CBF0-42B8-B119-07219E384A4A}:_2D5B6CC73A844411A42015B4C7DC4ED9"
+                    {
+                    "Command" = "8:&Open"
+                    "Verb" = "8:open"
+                    "Arguments" = "8:\"%1\""
+                    "Order" = "3:0"
+                    }
+                }
+            }
+            "{5EB83D71-FA18-4901-BE56-DE22E13CC478}:_FD2C2A02DA1D48C5B28BA90D4088452F"
+            {
+            "Name" = "8:markdown"
+            "Description" = "8:"
+            "Extensions" = "8:.markdown"
+            "MIME" = "8:"
+            "Icon" = "8:"
+            "IconIndex" = "3:0"
+                "Command"
+                {
+                "Command" = "8:_2EFE575E6F4943919AD25A31A61EC3A6"
+                }
+                "Verbs"
+                {
+                    "{95C0C507-CBF0-42B8-B119-07219E384A4A}:_1466C382826842A1BCFBAE5E6F14E7CB"
+                    {
+                    "Command" = "8:&Open"
+                    "Verb" = "8:open"
+                    "Arguments" = "8:\"%1\""
+                    "Order" = "3:0"
+                    }
+                }
+            }
         }
         "Folder"
         {
@@ -723,7 +769,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:YaMdEditor"
         "ProductCode" = "8:{164ECBEE-D77E-40F0-9925-F46C55142CF6}"
-        "PackageCode" = "8:{9B7849AF-88C6-46D1-86B9-102527AF511C}"
+        "PackageCode" = "8:{735D047B-4C26-4F3E-A28B-D1F523A5B2AE}"
         "UpgradeCode" = "8:{937D91C8-C7D4-4FDE-92BC-386DE1B9D4BE}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"

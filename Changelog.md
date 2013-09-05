@@ -2,6 +2,8 @@
 ##新增功能
 *  支持不同markdown 解析引擎。
 *  支持GFM，TOC
+##修改bug
+* inputbox的imemode=on
 #2013-09-04
 ##新增功能
 * 粘贴内容格式为文本内容

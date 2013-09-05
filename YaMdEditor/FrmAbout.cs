@@ -10,57 +10,39 @@ using System.Reflection;
 
 namespace YaMdEditor
 {
-	public partial class FormAbout : Form
-	{
-		public FormAbout()
-		{
-			InitializeComponent();
-		}
-
-		private void FormAbout_Load(object sender, EventArgs e)
-		{
-
-
-			Assembly assembly = Assembly.GetEntryAssembly();
-			AssemblyCopyrightAttribute[] CopyrightAttribute =
-					(AssemblyCopyrightAttribute[])assembly.GetCustomAttributes(typeof(AssemblyCopyrightAttribute), false);
-			String CopyrightString = CopyrightAttribute[0].Copyright;
-
-			labelAppName.Text = Application.ProductName;
-			labelVersion.Text = "Version." + Application.ProductVersion;
-			labelCopyright.Text = CopyrightString;
-
-		}
-
-		private void cmdOK_Click(object sender, EventArgs e)
-		{
-			this.Close();
-		}
-
-		private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-		{
-			linkLabel2.LinkVisited = true;
-			System.Diagnostics.Process.Start(linkLabel2.Text);
-		}
-
-		private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-		{
-			linkLabel3.LinkVisited = true;
-			System.Diagnostics.Process.Start(linkLabel3.Text);
-		}
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+    public partial class FormAbout : Form
+    {
+        public FormAbout()
         {
-            linkLabel1.LinkVisited = true;
-            System.Diagnostics.Process.Start(linkLabel1.Text);
+            InitializeComponent();
         }
 
-        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void FormAbout_Load(object sender, EventArgs e)
         {
-            linkLabel4.LinkVisited = true;
-            System.Diagnostics.Process.Start(linkLabel4.Text);
+
+
+            Assembly assembly = Assembly.GetEntryAssembly();
+            AssemblyCopyrightAttribute[] CopyrightAttribute =
+                    (AssemblyCopyrightAttribute[])assembly.GetCustomAttributes(typeof(AssemblyCopyrightAttribute), false);
+            String CopyrightString = CopyrightAttribute[0].Copyright;
+
+            labelAppName.Text = Application.ProductName;
+            labelVersion.Text = "Version." + Application.ProductVersion;
+            labelCopyright.Text = CopyrightString;
+
+        }
+
+        private void cmdOK_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void llbAppUrl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            llbAppUrl.LinkVisited = true;
+            System.Diagnostics.Process.Start(llbAppUrl.Text);
         }
 
 
-	}
+    }
 }

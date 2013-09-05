@@ -24,6 +24,8 @@ namespace YaMdEditor
             Button buttonOk = new Button();
             Button buttonCancel = new Button();
 
+            textBox.ImeMode = ImeMode.On;
+
             form.Text = title;
             label.Text = promptText;
             textBox.Text = value;
