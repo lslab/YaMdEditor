@@ -123,7 +123,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="splitContainer1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 50</value>
+    <value>0, 54</value>
   </data>
   <data name="txtMarkdown.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -141,11 +141,14 @@
     <value>Vertical</value>
   </data>
   <data name="txtMarkdown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>335, 237</value>
+    <value>292, 233</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="txtMarkdown.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
+  </data>
+  <data name="txtMarkdown.Text" xml:space="preserve">
+    <value />
   </data>
   <data name="&gt;&gt;txtMarkdown.Name" xml:space="preserve">
     <value>txtMarkdown</value>
@@ -178,7 +181,7 @@
     <value>3, 3</value>
   </data>
   <data name="webPreview.Size" type="System.Drawing.Size, System.Drawing">
-    <value>369, 205</value>
+    <value>321, 201</value>
   </data>
   <data name="webPreview.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -202,7 +205,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tpPreview.Size" type="System.Drawing.Size, System.Drawing">
-    <value>375, 211</value>
+    <value>327, 207</value>
   </data>
   <data name="tpPreview.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -235,7 +238,7 @@
     <value>Vertical</value>
   </data>
   <data name="txtSource.Size" type="System.Drawing.Size, System.Drawing">
-    <value>369, 205</value>
+    <value>321, 201</value>
   </data>
   <data name="txtSource.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -259,7 +262,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tpSource.Size" type="System.Drawing.Size, System.Drawing">
-    <value>375, 211</value>
+    <value>327, 207</value>
   </data>
   <data name="tpSource.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -286,7 +289,7 @@
     <value>0, 0</value>
   </data>
   <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>383, 237</value>
+    <value>335, 233</value>
   </data>
   <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -316,10 +319,10 @@
     <value>1</value>
   </data>
   <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>720, 237</value>
+    <value>629, 233</value>
   </data>
   <data name="splitContainer1.SplitterDistance" type="System.Int32, mscorlib">
-    <value>335</value>
+    <value>292</value>
   </data>
   <data name="splitContainer1.SplitterWidth" type="System.Int32, mscorlib">
     <value>2</value>
@@ -837,8 +840,14 @@
   <data name="menuTool.Text" xml:space="preserve">
     <value>&amp;Tools</value>
   </data>
+  <data name="menuViewSample.Size" type="System.Drawing.Size, System.Drawing">
+    <value>217, 22</value>
+  </data>
+  <data name="menuViewSample.Text" xml:space="preserve">
+    <value>View Markdown Sample</value>
+  </data>
   <data name="menuAbout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 22</value>
+    <value>217, 22</value>
   </data>
   <data name="menuAbout.Text" xml:space="preserve">
     <value>&amp;About</value>
@@ -853,7 +862,7 @@
     <value>0, 0</value>
   </data>
   <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>720, 25</value>
+    <value>629, 25</value>
   </data>
   <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -879,21 +888,21 @@
   <data name="toolStripButtonNewFile.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGlSURBVDhPjZHfK0NhGMfflKvlyq3yB7hywY24x25cu+Sf
-        UMofQAlNMaQhG7Xyo0QZQhlJ2mizsdaMZpsNm805Z+frec95z34kp33r6Xl7nvfzfc/zHGYolRosyvJA
-        AHYG+BhkuT8Sj1sl0TZXKWDZlkYIhA3YpXyvn7VarntDXPtfSsByXQaWKbaYfqZaNtgFt8cP1/4NVne8
-        WNnxjgusImmCLtsopjjE5dS/ZJ7CadSAhc1jdPYN/zWJ3DN5fbJZxTRdpvnx1AgcUS62A7EWgdMbq/s4
-        OPdrJo7tiwmB0wiK9ao8An+RXi/vBGMazDXj2NNgIwROBrmekzKwSDncoJ312hxnNclKSTMxjASuS021
-        jZZCTbNwE/TcCqRH6A/YBQqoqop8QUIindcMOnqHag0MLblPBVKrH0nB+0cB0dcPc4N5l0cgFSklFZ/5
-        H7wkc3iIvpsbzK4dCKyiQlFGMvONSDwLXyhpbsCb1eKLy34VEUt8IhBJ4+rutX6D6sWFYxncBt9wdvNc
-        v0H14u4eU/D6XnB4Ga3PgGezMDXgzXqCMcZ+Afg3Nt++oJEhAAAAAElFTkSuQmCC
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGlSURBVDhPjZHLSsNQEIYPgitx5VbwAVy50I3o3svGtUt9
+        CUHwAXSjouIV8QKtQsELiII3VLAWKVKVeC2l1lKb2lZbG5M0v3OSk7Qihv4wzGHmfP/JTJgtWe5VNK1H
+        wiwDQgya1hWOxbpV0XZXUarZVAcIxASwTfnWOpu1XNuauPa/dKnm0gEWKTaYdaZa5q4VvoNreHeDWNny
+        Y3nLPyywktQRujxBMcohLo/1JTMUHrsGzK0foaWz/69J+JZpU0N1BsboMs2P52rgkLLSBETrBU5vrOxi
+        7+zaNFnaPB8ROI2gdwecEfiL9LqzEwyZMNf40o4J2yFwMsi1HzvAPOXHKvNs1aY5a0rTi6aJbSRwS4bc
+        OFh8qJ2Ej6CXBiA1QH9gVqCAYRjIF1QkUnnToLmj77eBrQXfiUB+61vV8Z4tIBLPuhvMeA8EUpJeNPCR
+        /8ZrMof7yLu7weTqnsBKKigakukvhGMZhB6S7ga8WS6+uMyngmjiA1I4hcBNvHKD8sU9RtO4unvDafCl
+        coPyxd08yfCHXrF/EanMgGe3cDXgzUqCMcZ+AJfnNr/X4ZkHAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="toolStripButtonNewFile.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
   <data name="toolStripButtonNewFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
+    <value>23, 26</value>
   </data>
   <data name="toolStripButtonNewFile.Text" xml:space="preserve">
     <value>New File</value>
@@ -919,7 +928,7 @@
     <value>Magenta</value>
   </data>
   <data name="toolStripButtonOpenFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
+    <value>23, 26</value>
   </data>
   <data name="toolStripButtonOpenFile.Text" xml:space="preserve">
     <value>Open File</value>
@@ -944,39 +953,39 @@
     <value>Magenta</value>
   </data>
   <data name="toolStripButtonSaveFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
+    <value>23, 26</value>
   </data>
   <data name="toolStripButtonSaveFile.Text" xml:space="preserve">
     <value>Save File</value>
   </data>
   <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 25</value>
+    <value>6, 29</value>
   </data>
   <data name="toolStripButtonUndo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHnSURBVDhPY6ApmLTlW8zEjV93zNz98dGyA1+OrNj/Zcqy
         I1+loNL4Qe+GrzvqN1z5073u6/PGFR8f1y/+cmfuzo+Pl+36+gmrId2rXv1fcvKLAYjdtfbLsv7593+n
-        9Lx64xJ/4rdW6vY/+gnrv9uX3f04c+vXN6v2f7kJ1gQDK4/942xc8vL/vP1fr9Yv/9pQv+nKn7j6/n+u
+        9Lx64xJ/4rdW6vY/+gnrv9uX3f04c+vXN6v2f7kJ1gQDK4/942xc8vL/vP1fr9Yv/9pQv+nKn7j6+n+u
         Bcf/22Vs+mUSu+q4ff7Wh1rx9X/COl7+XHzg832oVgQonvn8f9asz/8L53z5H9n17oWV/Za/ZtGLf5hE
         r8wHyfvW71AxDF7wwrX8+vv6pV/2gDUhg6S+Z/+9m978j+79/L9szpv/Gl6TVhtFrXCESjMwhIYyy8cf
         +u1adud1/covh6CiCBDU/PS/WfH9/55Nr8AuSex59L924VtLqDSDsXEaq539/r9udc++Na34vAUqjABO
         FY//OxRd+2+Vefy/Sfy2/4ZRa/9r+Ez9D5VmMElco2SbWf/PvmX/3/xpj0qhwrgBKGChTDBQ957srlV2
-        5U9a/fR/9av+s0GFiQcWKfsuhtTP+BdWdzYXKkQcSOz7oGSfdz7GH6jZrfLKNwaG/4xQKeKAR+UTZ5/6
-        p7/ss/b/NI5c4QUVJh5E9HyOdC652miQuFIUKjSoAAMDAPCh8n2P0U1jAAAAAElFTkSuQmCC
+        5U9affu/+lX/2aDCxAOLlH0XQ+o7/oXVnc2FChEHEvs+KNnnnY/xB2p2q7zyjYHhPyNUijjgUfnE2af+
+        6S/7rP0/jSNXeEGFiQcRPZ8jnUuuNhokrhSFCg0qwMAAAIFB8j2jIkilAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="toolStripButtonUndo.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
   <data name="toolStripButtonUndo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
+    <value>23, 26</value>
   </data>
   <data name="toolStripButtonUndo.Text" xml:space="preserve">
     <value>Undo</value>
   </data>
   <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 25</value>
+    <value>6, 29</value>
   </data>
   <data name="toolStripButtonCut.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -996,7 +1005,7 @@
     <value>Magenta</value>
   </data>
   <data name="toolStripButtonCut.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
+    <value>23, 26</value>
   </data>
   <data name="toolStripButtonCut.Text" xml:space="preserve">
     <value>Cut</value>
@@ -1019,7 +1028,7 @@
     <value>Magenta</value>
   </data>
   <data name="toolStripButtonCopy.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
+    <value>23, 26</value>
   </data>
   <data name="toolStripButtonCopy.Text" xml:space="preserve">
     <value>Copy</value>
@@ -1045,13 +1054,13 @@
     <value>Magenta</value>
   </data>
   <data name="toolStripButtonPaste.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
+    <value>23, 26</value>
   </data>
   <data name="toolStripButtonPaste.Text" xml:space="preserve">
     <value>Paste</value>
   </data>
   <data name="toolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 25</value>
+    <value>6, 29</value>
   </data>
   <data name="toolStripButtonFont.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1070,13 +1079,13 @@
     <value>Magenta</value>
   </data>
   <data name="toolStripButtonFont.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
+    <value>23, 26</value>
   </data>
   <data name="toolStripButtonFont.Text" xml:space="preserve">
     <value>Font</value>
   </data>
   <data name="toolStripSeparator7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 25</value>
+    <value>6, 29</value>
   </data>
   <data name="toolStripButtonRefresh.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1094,13 +1103,13 @@
     <value>Magenta</value>
   </data>
   <data name="toolStripButtonRefresh.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
+    <value>23, 26</value>
   </data>
   <data name="toolStripButtonRefresh.Text" xml:space="preserve">
     <value>Refresh</value>
   </data>
   <data name="toolStripSeparator6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 25</value>
+    <value>6, 29</value>
   </data>
   <data name="toolButtonOutput.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1121,7 +1130,7 @@
     <value>Magenta</value>
   </data>
   <data name="toolButtonOutput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
+    <value>23, 26</value>
   </data>
   <data name="toolButtonOutput.Text" xml:space="preserve">
     <value>Output to HTML file</value>
@@ -1160,13 +1169,22 @@
     <value>Magenta</value>
   </data>
   <data name="toolStripButtonOutputHtmlToClipBoard.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
+    <value>23, 26</value>
   </data>
   <data name="toolStripButtonOutputHtmlToClipBoard.Text" xml:space="preserve">
     <value>Output HTML source to Clipboard</value>
   </data>
   <data name="toolStripSeparator5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 25</value>
+    <value>6, 29</value>
+  </data>
+  <data name="toolStripcbCssFileName.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Standard</value>
+  </data>
+  <data name="toolStripcbCssFileName.MaxDropDownItems" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="toolStripcbCssFileName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 29</value>
   </data>
   <data name="toolStripcbMarkdownParser.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Standard</value>
@@ -1192,6 +1210,9 @@
   <data name="toolStripcbMarkdownParser.Items6" xml:space="preserve">
     <value>MarkdownDeep - Standard</value>
   </data>
+  <data name="toolStripcbMarkdownParser.MaxDropDownItems" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
   <data name="toolStripcbMarkdownParser.Size" type="System.Drawing.Size, System.Drawing">
     <value>350, 25</value>
   </data>
@@ -1199,7 +1220,7 @@
     <value>0, 25</value>
   </data>
   <data name="toolStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>720, 25</value>
+    <value>629, 29</value>
   </data>
   <data name="toolStrip1.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -1244,7 +1265,7 @@
     <value>MiddleLeft</value>
   </data>
   <data name="toolStripStatusLabel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>247, 18</value>
+    <value>156, 18</value>
   </data>
   <data name="toolStripStatusLabelCssFileName.Size" type="System.Drawing.Size, System.Drawing">
     <value>102, 18</value>
@@ -1274,7 +1295,7 @@
     <value>0, 287</value>
   </data>
   <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>720, 23</value>
+    <value>629, 23</value>
   </data>
   <data name="statusStrip1.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -1328,7 +1349,7 @@
     <value>True</value>
   </metadata>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>720, 310</value>
+    <value>629, 310</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1353,6 +1374,9 @@
         AAAAAAAA//8AAP//AADABwAAwAcAAMAHAADABwAAwAcAAMADAADAAQAAwAEAAMADAADABwAAwAcAAMAP
         AAD//wAA//8AAA==
 </value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="&gt;&gt;menuFile.Name" xml:space="preserve">
     <value>menuFile</value>
@@ -1785,6 +1809,18 @@
   </data>
   <data name="&gt;&gt;tm_preview.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuViewSample.Name" xml:space="preserve">
+    <value>menuViewSample</value>
+  </data>
+  <data name="&gt;&gt;menuViewSample.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripcbCssFileName.Name" xml:space="preserve">
+    <value>toolStripcbCssFileName</value>
+  </data>
+  <data name="&gt;&gt;toolStripcbCssFileName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FormMdEditor</value>

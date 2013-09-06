@@ -135,14 +135,29 @@ namespace YaMdEditor
             //-----------------------------------
             //View selected CSS file name
             toolStripStatusLabelCssFileName.Text = Resources.toolTipCssFileName;
-
+            toolStripcbCssFileName.Text = Resources.toolTipCssFileName;
             if (obj.ArrayCssFileList.Count > 0)
             {
                 string FilePath = (string)obj.ArrayCssFileList[0];
                 if (File.Exists(FilePath) == true)
                 {
                     toolStripStatusLabelCssFileName.Text = Path.GetFileName(FilePath);
+                    toolStripcbCssFileName.Text = Path.GetFileName(FilePath);
                     _SelectedCssFilePath = FilePath;
+                }
+            }
+
+            toolStripcbCssFileName.Items.Clear();
+            foreach (string FilePath in AppSettings.Instance.ArrayCssFileList)
+            {
+                if (File.Exists(FilePath) == true)
+                {
+                    string fileName = Path.GetFileName(FilePath);
+                    this.toolStripcbCssFileName.Items.Add(fileName);
+                    if (_SelectedCssFilePath == FilePath)
+                    {
+                        toolStripcbCssFileName.Text = fileName;
+                    }
                 }
             }
 
@@ -304,10 +319,12 @@ namespace YaMdEditor
             if (File.Exists(_SelectedCssFilePath) == true)
             {
                 toolStripStatusLabelCssFileName.Text = Path.GetFileName(_SelectedCssFilePath);
+                toolStripcbCssFileName.Text = Path.GetFileName(_SelectedCssFilePath);
             }
             else
             {
                 toolStripStatusLabelCssFileName.Text = Resources.toolTipCssFileName;
+                toolStripcbCssFileName.Text = Resources.toolTipCssFileName;
             }
 
             _fConstraintChange = true;
@@ -522,6 +539,7 @@ namespace YaMdEditor
             {
                 _SelectedCssFilePath = (string)e.ClickedItem.Tag;
                 toolStripStatusLabelCssFileName.Text = Path.GetFileName(_SelectedCssFilePath);
+                toolStripcbCssFileName.Text = Path.GetFileName(_SelectedCssFilePath);
                 _cssContent = "";
                 _htmlHeader = "";
                 PreviewToBrowser();
@@ -1766,6 +1784,47 @@ namespace YaMdEditor
         {
             this._markdownParserIndex = toolStripcbMarkdownParser.SelectedIndex;
             this.PreviewToBrowser();
+            this.txtMarkdown.Focus();
+        }
+
+        private void menuViewSample_Click(object sender, EventArgs e)
+        {
+            string SampleFilePath = Path.Combine(Path.GetDirectoryName(Application.ExecutablePath), "MdSample.md");
+
+            if (File.Exists(SampleFilePath) == true)
+            {
+                System.Diagnostics.ProcessStartInfo pInfo = new System.Diagnostics.ProcessStartInfo();
+                pInfo.FileName = SampleFilePath;
+                pInfo.UseShellExecute = true;
+                System.Diagnostics.Process p = System.Diagnostics.Process.Start(pInfo);
+            }
+            else
+            {
+                //"Could not find sample MD file.\nOpening this file has failed."
+                MessageBox.Show(Resources.MsgNoSampleFile,
+                    Resources.DialogTitleError, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void toolStripcbCssFileName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ToolStripComboBox cb = (ToolStripComboBox)sender;
+            if (!cb.Focused)
+            {
+                return;
+            }
+            string AppDirPath = Path.GetDirectoryName(Application.ExecutablePath);
+            string CssDirPath = Path.Combine(AppDirPath, "css");
+            string strCssFilePath = Path.Combine(CssDirPath, toolStripcbCssFileName.Text);
+            if (File.Exists(strCssFilePath))
+            {
+                _SelectedCssFilePath = strCssFilePath;
+                toolStripStatusLabelCssFileName.Text = Path.GetFileName(_SelectedCssFilePath);
+                toolStripcbCssFileName.Text = Path.GetFileName(_SelectedCssFilePath);
+                _cssContent = "";
+                _htmlHeader = "";
+                PreviewToBrowser();
+            }
             this.txtMarkdown.Focus();
         }
     }

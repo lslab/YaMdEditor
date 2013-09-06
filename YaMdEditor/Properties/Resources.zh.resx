@@ -180,7 +180,7 @@ Do you wish to continue searching from the beginning of this file?</value>
     <value>Could not find Help file. Opening this file has failed.</value>
   </data>
   <data name="MsgNoSampleFile" xml:space="preserve">
-    <value>没有发现示例MD文件，打开此文件失败。</value>
+    <value>没有发现Markdown示例文件，打开此文件失败。</value>
   </data>
   <data name="MsgNotFound" xml:space="preserve">
     <value>The word was not found.</value>

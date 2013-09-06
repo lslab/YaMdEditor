@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMdEditor));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.txtMarkdown = new RichTextBoxEx();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpPreview = new System.Windows.Forms.TabPage();
             this.webPreview = new System.Windows.Forms.WebBrowser();
@@ -113,6 +112,9 @@
             this.contextMenu1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.bgWorker_Preview = new System.ComponentModel.BackgroundWorker();
             this.tm_preview = new System.Windows.Forms.Timer(this.components);
+            this.menuViewSample = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripcbCssFileName = new System.Windows.Forms.ToolStripComboBox();
+            this.txtMarkdown = new RichTextBoxEx();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -137,16 +139,6 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.tabControl1);
-            // 
-            // txtMarkdown
-            // 
-            this.txtMarkdown.AcceptsTab = true;
-            resources.ApplyResources(this.txtMarkdown, "txtMarkdown");
-            this.txtMarkdown.HorizontalPosition = 0;
-            this.txtMarkdown.Name = "txtMarkdown";
-            this.txtMarkdown.VerticalPosition = 0;
-            this.txtMarkdown.VScroll += new System.EventHandler(this.txtMarkdown_VScroll);
-            this.txtMarkdown.TextChanged += new System.EventHandler(this.txtMarkdown_TextChanged);
             // 
             // tabControl1
             // 
@@ -478,6 +470,7 @@
             // menuHelp
             // 
             this.menuHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuViewSample,
             this.menuAbout});
             this.menuHelp.Name = "menuHelp";
             resources.ApplyResources(this.menuHelp, "menuHelp");
@@ -510,7 +503,9 @@
             this.toolButtonOutput,
             this.toolStripButtonOutputHtmlToClipBoard,
             this.toolStripSeparator5,
+            this.toolStripcbCssFileName,
             this.toolStripcbMarkdownParser});
+            this.toolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             resources.ApplyResources(this.toolStrip1, "toolStrip1");
             this.toolStrip1.Name = "toolStrip1";
             // 
@@ -720,6 +715,30 @@
             // 
             this.tm_preview.Tick += new System.EventHandler(this.tm_preview_Tick);
             // 
+            // menuViewSample
+            // 
+            this.menuViewSample.Name = "menuViewSample";
+            resources.ApplyResources(this.menuViewSample, "menuViewSample");
+            this.menuViewSample.Click += new System.EventHandler(this.menuViewSample_Click);
+            // 
+            // toolStripcbCssFileName
+            // 
+            this.toolStripcbCssFileName.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripcbCssFileName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.toolStripcbCssFileName, "toolStripcbCssFileName");
+            this.toolStripcbCssFileName.Name = "toolStripcbCssFileName";
+            this.toolStripcbCssFileName.SelectedIndexChanged += new System.EventHandler(this.toolStripcbCssFileName_SelectedIndexChanged);
+            // 
+            // txtMarkdown
+            // 
+            this.txtMarkdown.AcceptsTab = true;
+            resources.ApplyResources(this.txtMarkdown, "txtMarkdown");
+            this.txtMarkdown.HorizontalPosition = 0;
+            this.txtMarkdown.Name = "txtMarkdown";
+            this.txtMarkdown.VerticalPosition = 0;
+            this.txtMarkdown.VScroll += new System.EventHandler(this.txtMarkdown_VScroll);
+            this.txtMarkdown.TextChanged += new System.EventHandler(this.txtMarkdown_TextChanged);
+            // 
             // FormMdEditor
             // 
             resources.ApplyResources(this, "$this");
@@ -837,6 +856,8 @@
         private System.Windows.Forms.ToolStripMenuItem menuViewChinese;
         private System.Windows.Forms.ToolStripMenuItem menuViewEnglish;
         private System.Windows.Forms.ToolStripComboBox toolStripcbMarkdownParser;
+        private System.Windows.Forms.ToolStripMenuItem menuViewSample;
+        private System.Windows.Forms.ToolStripComboBox toolStripcbCssFileName;
         
 
     }

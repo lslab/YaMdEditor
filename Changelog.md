@@ -1,4 +1,7 @@
 #2013-09-06
+##新增功能
+* 增加css toolstripcombox,通过工具栏下拉框选择css
+* 增加view markdown sample
 ##修改功能
 * 根据markdown风格输出html文件
 
