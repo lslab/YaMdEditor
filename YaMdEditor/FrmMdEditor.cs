@@ -1521,47 +1521,104 @@ namespace YaMdEditor
                 FooterString = "";
             }
 
-            //-----------------------------------
-            //Markdown parse ( default )
-            //Markdown mkdwn = new Markdown();
-            //-----------------------------------
-
-            //-----------------------------------
-            // MarkdownDeep
-            // Create an instance of Markdown
-            //-----------------------------------
-            var mkdwn = new MarkdownDeep.Markdown();
-            // Set options
-            mkdwn.ExtraMode = true;
-            mkdwn.SafeMode = false;
-            //-----------------------------------
-
             //Editing file path
             if (_MarkDownTextFilePath == FilePath)
             {
-                ResultText = mkdwn.Transform(txtMarkdown.Text);
-                //Convert encoding ( richEditBox default encoding is utf-8 = 65001 )
-                ResultText = ConvertStringToEncoding(ResultText, Encoding.UTF8.CodePage, CodePageNum);
+                ResultText = txtMarkdown.Text;
             }
             else
             {
-                //Detect encoding in the text file
-                //Get charcter encoding
                 encRead = TextFileEncodingDetector.GetEncoding(FilePath);
-
                 if (File.Exists(FilePath) == true)
                 {
                     ResultText = File.ReadAllText(FilePath, encRead);
-                }
-
-                //Convert it if encoding is not utf-8
-                if (encRead != Encoding.UTF8)
-                {
-                    ResultText = ConvertStringToEncoding(ResultText, encRead.CodePage, CodePageNum);
-                }
-                ResultText = mkdwn.Transform(ResultText);
+                }                
             }
 
+
+            if (_markdownParserIndex == 0)  //SundownNet - Github Flovored Markdown With TOC
+            {
+                var mode = new Sundown.HtmlRenderMode();
+                mode.TOC = true;
+                mode.HardWrap = true;
+
+                var render = new Sundown.HtmlRenderer(mode);
+                var toc = new Sundown.TableOfContentRenderer();
+
+                var extension = new Sundown.MarkdownExtensions();
+                extension.Autolink = true;
+                extension.FencedCode = true;
+                extension.Tables = true;
+                extension.Strikethrough = true;
+                extension.NoIntraEmphasis = true;
+                extension.SuperScript = true;
+
+                var mdtoc = new Sundown.Markdown(toc);
+                var md = new Sundown.Markdown(render, extension);
+
+                ResultText = mdtoc.Transform(ResultText) + md.Transform(ResultText);
+            }
+            else if (_markdownParserIndex == 1)  //SundownNet - Github Flovored Markdown
+            {
+                var mode = new Sundown.HtmlRenderMode();
+                mode.HardWrap = true;
+
+                var render = new Sundown.HtmlRenderer(mode);
+
+                var extension = new Sundown.MarkdownExtensions();
+                extension.Autolink = true;
+                extension.FencedCode = true;
+                extension.Tables = true;
+                extension.Strikethrough = true;
+                extension.NoIntraEmphasis = true;
+                extension.SuperScript = true;
+
+                var md = new Sundown.Markdown(render, extension);
+
+                ResultText = md.Transform(ResultText);
+            }
+            else if (_markdownParserIndex == 2)  //SundownNet - Standard
+            {
+                var render = new Sundown.HtmlRenderer();
+                var md = new Sundown.Markdown(render);
+
+                ResultText = md.Transform(ResultText);
+            }
+            else if (_markdownParserIndex == 3)  //MarkdownSharp - StackOverFlow Style 
+            {
+                var md = new MarkdownSharp.Markdown();
+                md.AutoNewLines = true;
+                md.AutoHyperlink = true;
+                md.LinkEmails = true;
+                md.StrictBoldItalic = true;
+                ResultText = md.Transform(ResultText);
+
+            }
+            else if (_markdownParserIndex == 4)   //MarkdownSharp - Standard
+            {
+                var md = new MarkdownSharp.Markdown();
+                ResultText = md.Transform(ResultText);
+            }
+            else if (_markdownParserIndex == 5) //MarkdownDeep - Markdown Extra
+            {
+                var md = new MarkdownDeep.Markdown();
+
+                md.ExtraMode = true;
+                md.SafeMode = false;
+
+                ResultText = md.Transform(ResultText);
+
+            }
+            else
+            {
+                var md = new MarkdownDeep.Markdown();
+                var text = md.SectionHeader;
+                md.ExtraMode = false;
+                md.SafeMode = true;
+                ResultText = md.Transform(ResultText);
+            }
+
+           
             //Header + Contents + Footer
             ResultText = HeaderString + ResultText + FooterString;
             //Ajust encoding to output HTML file

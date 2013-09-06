@@ -30,6 +30,7 @@ https://github.com/lslab/YaMdEditor
 ##感谢
 
 
+##Credits
  
 ### MarkDown#Editor
 Copyright (C) 2012-2013 M.Hibara, All rights reserved.
